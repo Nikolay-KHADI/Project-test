@@ -1,26 +1,25 @@
-// import React, { useEffect } from 'react'
-// import { useState } from 'react';
+import React, { useEffect } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-// import { useDispatch, useSelector } from 'react-redux';
-// import { Modal } from '../components/Modal';
-// import { getParkingsThunk } from '../components/getParkingsThunk';
+import { useDispatch, useSelector } from 'react-redux';
+import { getParkingsThunk } from '../components/getParkingsThunk';
+import { TransitionsModal } from '../components/TransitionsModal';
 
 
 
 export function LayoutPage() {
   // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const isModalOpen = useSelector(state => state.modal.isModalOpen);
-  // const dispatch = useDispatch();
+  const isModalOpen = useSelector(state => state.modal.isModalOpen);
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(getParkingsThunk())
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch(getParkingsThunk())
+  }, [dispatch])
 
-  // const closeModal = () => {
-  //   dispatch({type: 'PASS_FALSE_TO_IS_MODAL_OPEN'})
-  // }
+  const closeModal = () => {
+    dispatch({type: 'PASS_FALSE_TO_IS_MODAL_OPEN'})
+  }
 
-  // console.log("Render LayoutPage");
+  console.log("Render LayoutPage");
 
   return (
     <div>
@@ -33,9 +32,12 @@ export function LayoutPage() {
       </div>
 
       <Outlet />
-      {/* {console.log(1) || isModalOpen && <Modal
-        closeModal={() => closeModal()}
-      ></Modal>} */}
+
+      <TransitionsModal
+        isModalOpen={isModalOpen}
+        closeModal={closeModal}
+      ></TransitionsModal>
+
     </div>
   )
 }
