@@ -18,7 +18,7 @@
 /* background-color: #c0bfbf */
 }
 
-.container {
+.wrap {
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -25,7 +25,7 @@ export function LayoutPage() {
   console.log("Render LayoutPage");
 
   return (
-    <div className='container'>
+    <div className='wrap'>
       <div className='navbar'>
         <Link href="/">Головна сторінка</Link>
         <Link href="list">Адреси парковок</Link>
