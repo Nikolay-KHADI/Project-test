@@ -25,15 +25,20 @@ export function LayoutPage() {
   console.log("Render LayoutPage");
 
   return (
-    <div className='wrap'>
-      <div className='navbar'>
-        <Link href="/">Головна сторінка</Link>
-        <Link href="list">Адреси парковок</Link>
-        <Link href="map">Парковки на карті</Link>
-        <Link href="fav">Обрані парковки</Link>
+    <div>
+      <div className='wrap'>
+
+        <div className='navbar'>
+          <Link href="/">Головна сторінка</Link>
+          <Link href="list">Адреси парковок</Link>
+          <Link href="map">Парковки на карті</Link>
+          <Link href="fav">Обрані парковки</Link>
+        </div>
+
+        <Outlet />
+
       </div>
 
-      <Outlet />
 
       <TransitionsModal
         isModalOpen={isModalOpen}
