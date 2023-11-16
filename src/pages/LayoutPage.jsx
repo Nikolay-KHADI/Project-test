@@ -28,14 +28,19 @@ export function LayoutPage() {
     <div>
       {/* <div> */}
 
-        <div className='navbar'>
-          <Link href="/">Головна сторінка</Link>
+      <div className='navbar'>
+        {/* <Link href="/">Головна сторінка</Link>
           <Link href="list">Адреси парковок</Link>
           <Link href="map">Парковки на карті</Link>
-          <Link href="fav">Обрані парковки</Link>
-        </div>
+          <Link href="fav">Обрані парковки</Link> */}
 
-        <Outlet />
+        <NavLink to="/" >Головна сторінка </NavLink>
+        <NavLink to="list">Адреса парковок </NavLink>
+        <NavLink to="map">Парковки на карті </NavLink>
+        <NavLink to="fav">Обрані парковки </NavLink>
+      </div>
+
+      <Outlet />
 
       {/* </div> */}
 
