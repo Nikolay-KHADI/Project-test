@@ -35,10 +35,10 @@ export function LayoutPage() {
 
       <Outlet />
 
-      <TransitionsModal
+      {/* <TransitionsModal
         isModalOpen={isModalOpen}
         closeModal={closeModal}
-      ></TransitionsModal>
+      ></TransitionsModal> */}
 
     </div>
   )
