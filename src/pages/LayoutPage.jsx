@@ -26,7 +26,7 @@ export function LayoutPage() {
 
   return (
     <div>
-      <div>
+      {/* <div> */}
 
         <div className='navbar'>
           <Link href="/">Головна сторінка</Link>
@@ -37,7 +37,7 @@ export function LayoutPage() {
 
         <Outlet />
 
-      </div>
+      {/* </div> */}
 
 
       <TransitionsModal
