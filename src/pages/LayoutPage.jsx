@@ -26,7 +26,7 @@ export function LayoutPage() {
 
   return (
     <div>
-      <div className='wrap'>
+      <div>
 
         <div className='navbar'>
           <Link href="/">Головна сторінка</Link>
