@@ -1,18 +1,22 @@
 
 // import './MapPage.css'
-import { useLoadScript } from "@react-google-maps/api"
-import { Map } from '../components/Map';
-
-// const libraries = ["places"]
+// import { useLoadScript } from "@react-google-maps/api"
+// import { Map } from '../components/Map';
 
 
 export function MapPage() {
+  // const key= import.meta.env.VITE_MAP_API_KEY;
+  console.log('render MapPage');
 
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: import.meta.env.VITE_MAP_API_KEY,
-    // libraries: libraries,
-  });
+  // const { isLoaded } = useLoadScript({
+  //   googleMapsApiKey: import.meta.env.VITE_MAP_API_KEY,
+  //   // libraries: ["places"],
+  // });
 
-  if (!isLoaded) return <div>Loading...</div>
-  return <Map />
+
+
+  // if (!isLoaded) return <div>Loading...</div>
+  // return <Map />
+  return <div>MapPage</div>
+
 }
