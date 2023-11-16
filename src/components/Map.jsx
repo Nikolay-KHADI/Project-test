@@ -80,7 +80,7 @@ export function Map() {
           mapRef.current.panTo(coord);
         }} /> */}
       </div>
-      <GoogleMap
+      {/* <GoogleMap
         zoom={14}
         center={center}
         mapContainerClassName='map-container'
@@ -95,8 +95,8 @@ export function Map() {
           setisInfoWindowRightClick(true);
           setIsMarkerInfoWindow(false);
         }}
-      >
-        {findPlace && <Marker
+      > */}
+        {/* {findPlace && <Marker
           position={findPlace}
           icon="./src/img/2.png"
         ></Marker>}
@@ -126,7 +126,7 @@ export function Map() {
           position={markerInfoWindowPosition}
           onCloseClick={() => setIsMarkerInfoWindow(false)}
         >
-          <div>
+          <div> */}
             {/* <InfoList
               activeMarkerData={activeMarkerData}
               openModal={openModal}
@@ -134,7 +134,7 @@ export function Map() {
               startPointDirection={startPointDirection}
               fetchDirections={fetchDirections}
             ></InfoList>            */}
-          </div>
+          {/* </div>
 
         </InfoWindow>}
 
@@ -152,7 +152,7 @@ export function Map() {
           >Проложити маршрут з цієї точки</div>
         </InfoWindow>}
 
-      </GoogleMap>
+      </GoogleMap> */}
     </div>
   )
 }
